@@ -1,0 +1,24 @@
+{
+  "name": "@sangre-fp/hooks",
+  "version": "1.0.15",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.modern.mjs",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@sangre-fp/connectors": "^2.1.0",
+    "lodash-es": "^4.17.15"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "build": "microbundle --jsx React.createElement --entry src/index.js --format modern,umd",
+    "start": "microbundle --jsx React.createElement --entry src/index.js --watch --format modern,umd",
+    "get-version": "echo $npm_package_version"
+  },
+  "devDependencies": {
+    "microbundle": "0.12.0-next.8",
+    "prettier": "^1.19.1"
+  }
+}
